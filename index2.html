@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Food API</title>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <!-- Container wrapper -->
@@ -39,19 +38,13 @@
                     <img src="image/img4.jpg" class="d-block w-100" alt="image">
                     <div class="carousel-caption d-none d-md-block w-50 mb-5">
                         <div class="d-flex justify-content-around gap-5">
-                        <select class="form-select" id="category" aria-label="Default select example">
-                            <option value="all-Category">All Category</option>
-                            <!-- <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option> -->
-                        </select>
-                        <select class="form-select" id="region"  aria-label="Default select example">
-                            <option value="all-Region">All Region</option>
-                            <!-- <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option> -->
-                        </select>
-                        <button class="btn btn-success h-25" id="searchBtn" type="submit" type="button" class="btn btn-success">Filter</button>
+                            <select name="" class="form-select" id="all-category" onchange="getvalueofcategory(this.value)">
+                                <option id="all" value="AllCategory">All Category</option>
+                              </select>
+                              <select name="region" class="form-select" id="all-Region" onchange="getvalueofregion(this.value)">
+                                <option value="allRegion">All Region</option>
+                              </select>
+                        <button class="btn btn-success h-25" id="search" onclick="serCategRegion()" type="submit" type="button" class="btn btn-success">Filter</button>
                     </div>
                     </div>
                 </div>
@@ -63,7 +56,7 @@
                 <!-- file javascript -->
                 <!-- <tr><td colspan="4"><i>Loading...</i></td></tr> -->
             </div>
-            <div class="mt-5">
+            <!-- <div class="mt-5">
                 <ul class="pagination">
                     <li class="page-item">
                         <button class="page-link mx-2" id="prevButton">Prévious</button>
@@ -72,6 +65,10 @@
                         <button class="page-link" id="nextButton">Next</button>
                     </li>
                 </ul>
+            </div> -->
+            <div class="container mt-4 d-flex justify-content-center">
+                <div id="search-result" class="row gap-5"></div>
+            <div id="pagination"></div>
             </div>
         </section>
         <!-- Modal -->

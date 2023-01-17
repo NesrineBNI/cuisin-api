@@ -1,3 +1,6 @@
 #data{
     width: 90%;
 }
+.active-pagination {
+    background: #0ab1ce;
+}
