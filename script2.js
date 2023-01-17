@@ -57,28 +57,7 @@ async function getModal(id) {
        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>`;
 }
-// get data of category
-// async function getCategory() {
-//     const response = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
-//     const data = await response.json();
-//         // selectList = data.meals[0];
-//         // console.log(dataList);
-//     for(let i = 0; i < data.meals.length; i++) {
-//         document.querySelector("#category").innerHTML += `<option value="1">${data.meals[i].strCategory}</option>`;
-//     }
-// }
-// getCategory();
-// get data of Region
-// async function getRegion() {
-//     const response = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
-//     const data = await response.json();
-//         // regionList = data.meals[0];
-//         // console.log(dataList);
-//     for(let i = 0; i < data.meals.length; i++) {
-//         document.querySelector("#region").innerHTML += `<option value="1">${data.meals[i].strArea}</option>`;
-//     }
-// }
-// getRegion();
+
 // get data of category
 async function getAllCategory() {
     const response = await fetch(
